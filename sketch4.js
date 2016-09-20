@@ -74,7 +74,7 @@ function draw() {
 
   }
 
-  if(ex + 15 > mouseX && ex < mouseX + d + 15 && ey < mouseY + d + 15 && ey + 15 > mouseY) {
+  if(ex + 15 > x2 && ex < x2 + d + 15 && ey < y2 + d + 15 && ey + 15 > y2) {
     fill(255);
     ex = x
     ey = y
