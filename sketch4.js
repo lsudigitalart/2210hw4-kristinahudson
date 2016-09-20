@@ -16,14 +16,8 @@ var ed = 30;
 var speed = 4;
 var score = 0;
 var doonce = 1;
+var greystate = 1;
 
-var rx = 200;
-var ry = 200;
-var rw = 100;
-var rh = 100;
-
-// var f1 = 0;
-// var f2 = 0;
 
 function setup() {
   createCanvas(2000, 2000);
@@ -44,6 +38,8 @@ function draw() {
 
   fill(200);
   ellipse(ex, ey, ed);
+
+
 
     if(keyIsPressed) {
       if(key == "w"){
@@ -76,6 +72,12 @@ function draw() {
     }
 
 
+  }
+
+  if(ex + 15 > mouseX && ex < mouseX + d + 15 && ey < mouseY + d + 15 && ey + 15 > mouseY) {
+    fill(255);
+    ex = x
+    ey = y
   }
 
 }
