@@ -17,6 +17,7 @@ var speed = 4;
 var score = 0;
 var doonce = 1;
 var greystate = 1;
+var score = 0
 
 
 function setup() {
@@ -26,6 +27,8 @@ function setup() {
 function draw() {
   background(255);
   noStroke();
+  textSize(32);
+   text(score, width/2, 32);
 
   fill(253, 102, 0);
   ellipse(x, y, d);
@@ -39,7 +42,7 @@ function draw() {
   fill(200);
   ellipse(ex, ey, ed);
 
-
+//Moves grey ball arouns
 
     if(keyIsPressed) {
       if(key == "w"){
@@ -60,6 +63,7 @@ function draw() {
         }
    }
 
+//Moves blue and orange balls around
 
   if(mouseIsPressed) {
     if(mouseButton == LEFT) {
@@ -74,10 +78,13 @@ function draw() {
 
   }
 
+  //Makes grey ball go from blue to orange
+
   if(ex + 15 > x2 && ex < x2 + d + 15 && ey < y2 + d + 15 && ey + 15 > y2) {
     fill(255);
     ex = x
     ey = y
+    score++;
   }
 
 }
